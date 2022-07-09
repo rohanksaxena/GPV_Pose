@@ -90,7 +90,7 @@ def train(argv):
 
         #################################
         for i, data in enumerate(train_dataloader, 1):
-
+            print("inside dataloader")
             output_dict, loss_dict \
                 = network(rgb=data['roi_img'].to(device), depth=data['roi_depth'].to(device),
                           depth_normalize=data['depth_normalize'].to(device),

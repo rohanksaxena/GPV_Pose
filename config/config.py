@@ -5,7 +5,8 @@ import absl.flags as flags
 # datasets
 flags.DEFINE_integer('obj_c', 6, 'nnumber of categories')
 flags.DEFINE_string('dataset', 'Real', 'CAMERA or CAMERA+Real')
-flags.DEFINE_string('dataset_dir', '/data/zrd/datasets/NOCS', 'path to the dataset')
+# flags.DEFINE_string('dataset_dir', '/data/zrd/datasets/NOCS', 'path to the dataset')
+flags.DEFINE_string('dataset_dir', '/mnt/nfs-students/workspace/gpvpose/GPV_Pose/data', 'path to the dataset')
 flags.DEFINE_string('detection_dir', '/data/zrd/datasets/NOCS/detection_dualposenet/data/segmentation_results', 'path to detection results')
 flags.DEFINE_string('per_obj', '', 'only train an specified object')
 
@@ -50,7 +51,7 @@ flags.DEFINE_integer("train", 1, "1 for train mode")
 flags.DEFINE_string('device', 'cuda:0', '')
 # flags.DEFINE_string("train_gpu", '0', "gpu no. for training")
 flags.DEFINE_integer("num_workers", 8, "cpu cores for loading dataset")
-flags.DEFINE_integer('batch_size', 24, '')
+flags.DEFINE_integer('batch_size', 16, '')
 flags.DEFINE_integer('total_epoch', 150, 'total epoches in training')
 flags.DEFINE_integer('train_steps', 1000, 'number of batches in each epoch')  # batchsize is 8, then 3000
 #####################space is not enough, trade time for space####################
