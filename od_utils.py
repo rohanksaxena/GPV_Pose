@@ -154,7 +154,7 @@ def sample_points_from_mesh(path, n_pts, with_normal=False, fps=False, ratio=2):
 
 def load_depth(img_path):
     """ Load depth image from img_path. """
-    depth_path = img_path + '_depth.png'
+    depth_path = img_path.replace('rgb', 'depth')
     depth = cv2.imread(depth_path, -1)
     if len(depth.shape) == 3:
         # This is encoded depth image, let's convert
